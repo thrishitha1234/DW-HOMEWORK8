@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: analytics
+    tables:
+      - name: user_session_channel
+      - name: session_timestamp
+
+models:
+  - name: session_summary
+    description: "Analytics model for session data"
+    columns:
+      - name: sessionId
+        description: "Unique identifier for each stock price record"
+        data_tests:
+          - unique
+          - not_null
